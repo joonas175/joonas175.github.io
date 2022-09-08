@@ -10,17 +10,24 @@
 
 	let pointerOn = false;
 
+	let pointerBlinkJob : NodeJS.Timeout | null = null;
+
+	let hackermanRunning = false;
+
 	let titleEl : HTMLHeadingElement;
 
 	export const pointerBlink = () => {
-		setTimeout(() => {
+		if(pointerBlinkJob) {
+			clearTimeout(pointerBlinkJob);
+		}
+		pointerBlinkJob = setTimeout(() => {
 			pointerOn = !pointerOn;
 			pointerBlink();
 		}, 500);
 	};
 
 	export const hackerman = async (titlePart : String) => {
-		if(titlePart.length > 0) {
+		if(titlePart.length > 0 && hackermanRunning) {
 			const charToMatch = titlePart.charAt(0);
 			let i = 0;
 			const originalTitle = titleEl.innerText;
@@ -29,7 +36,7 @@
 			let char = charSet[i];
 
 
-			while(char !== charToMatch) {
+			while(char !== charToMatch && hackermanRunning) {
 				i++;
 				char = charSet[i];
 				titleEl.innerText = originalTitle + char;
@@ -39,21 +46,34 @@
 			hackerman(titlePart.substring(1));
 		} else {
 			pointerBlink();
+			hackermanRunning = false;
 		}
 	};
 
 	if(browser) {
 		onMount(() => {
 			if(titleEl && title.length > 1) {
+				hackermanRunning = true;
 				hackerman(title.substring(1));
 			}
 		});
 	};
 
+	export const resetTitle = () => {
+		if(browser && titleEl) {
+			if(pointerBlinkJob) {
+				clearTimeout(pointerBlinkJob);
+			}
+			hackermanRunning = true;
+			titleEl.innerText = title?.charAt(0);
+			hackerman(title.substring(1));
+		}
+	};
+
 </script>
 
 <header>
-	<div id="main-title-container">
+	<div id="main-title-container" on:click={resetTitle}>
 		<h1 id="main-title" bind:this={titleEl}>{ title?.charAt(0) }</h1>
 		<svg class="pointer-container">
 			{ #if pointerOn }
