@@ -10,6 +10,8 @@ RUN npm install
 
 COPY . .
 
+RUN npm install -g vite
+
 RUN npm run build
 
 EXPOSE 3000
