@@ -37,6 +37,9 @@
 		} else if (broken && currentTitle === title) {
 			broken = false;
 			fixed = true;
+			setTimeout(() => {
+				fixed = false;
+			}, 2000)
 		}
 	};
 
