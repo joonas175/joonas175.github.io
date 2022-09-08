@@ -21,6 +21,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0"
+		"@fontsource/fira-mono": "^4.5.0",
+		"@sveltejs/adapter-node": "^1.0.0-next.88",
+		"express": "^4.18.1"
 	}
 }
