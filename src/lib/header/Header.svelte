@@ -16,6 +16,9 @@
 
 	let titleEl : HTMLHeadingElement;
 
+	let broken = false;
+	let fixed = false;
+
 	export const pointerBlink = () => {
 		if(pointerBlinkJob) {
 			clearTimeout(pointerBlinkJob);
@@ -26,7 +29,19 @@
 		}, 500);
 	};
 
+	export const checkForBrokenTitle = () => {
+		const currentTitle = titleEl.innerText;
+		if(currentTitle !== title?.substring(0, currentTitle.length)) {
+			broken = true;
+			fixed = false;
+		} else if (broken && currentTitle === title) {
+			broken = false;
+			fixed = true;
+		}
+	};
+
 	export const hackerman = async (titlePart : String) => {
+		checkForBrokenTitle();
 		if(titlePart.length > 0 && hackermanRunning) {
 			const charToMatch = titlePart.charAt(0);
 			let i = 0;
@@ -81,6 +96,15 @@
 			{ /if }
 		</svg>
 	</div>
+
+	<div style="height: 30px;">
+		{#if broken}
+			<h2>You broke the title :( pls fix</h2>
+		{:else if fixed}
+			<h2>Thanks :)</h2>
+		{/if}
+	</div>
+	
 	
 	<nav data-sveltekit-prefetch>
 		<ul>
@@ -102,6 +126,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 	}
 
 	nav {
