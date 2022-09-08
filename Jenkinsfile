@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                git 'https://github.com/joonas175/portfolio'
                 sh 'docker build -t portfolio .'
             }
         }
