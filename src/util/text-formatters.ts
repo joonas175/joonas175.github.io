@@ -17,6 +17,18 @@ export const formatters : Formatter[] = [
 
             return (now.getFullYear() - date.getFullYear()).toString();
         }
+    },
+    {
+        // Years since
+        regex: /{(link:(.+):(.+:.+)})/,
+        method: (text) => {
+            const splits = text.split(':', 4);
+
+            let url = [splits[2], splits[3]].join(":"); // Spaghetti
+            url = url.substring(0, url.length - 1);
+
+            return `<a href="${url}">${splits[1]}</a>`;
+        }
     }
 ];
 

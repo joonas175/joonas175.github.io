@@ -5,7 +5,7 @@
     },
     {
         "title": "This website",
-        "content": "This website acts as my personal portfolio.\n\nOn this site, you can learn"
+        "content": "This website acts as my personal portfolio. It contains general info about me, my past, my projects, publications etc.\n\nThis site runs on my personal Raspberry Pi at my home, so it may not have the uptime. Please don't DDOS me. Written in Svelte using Sveltekit for that sweet search engine friendly distribution. Includes Jenkinsfile/Dockerfile for automatic build and deployment. See repo for more info: {link:click!:https://github.com/joonas175/portfolio}"
     },
     {
         "title": "About me",
