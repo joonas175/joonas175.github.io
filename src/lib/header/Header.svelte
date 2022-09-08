@@ -125,11 +125,21 @@
 </header>
 
 <style>
+
 	header {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		
+		padding-top: 1em;
+		max-width: 512px;
+		margin: auto;
+		-webkit-box-shadow: 0px -60px 300px 20px rgb(22 196 74 / 90%);
+		-moz-box-shadow: 0px -60px 300px 20px rgb(22 196 74 / 90%);
+		box-shadow: 0px -60px 300px 20px rgb(22 196 74 / 90%);
+
+		border: #2a752a solid 2px;
 	}
 
 	nav {
@@ -194,5 +204,9 @@
 
 	a:hover {
 		color: var(--accent-color);
+	}
+
+	h1 {
+		margin: 0px 0px 0px 0px;
 	}
 </style>
