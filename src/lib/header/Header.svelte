@@ -6,7 +6,7 @@
 
 	const charSet = Array.from(Array(95)).map((a, i) => i).map((i) => String.fromCharCode(i + 32));
 
-	const title = "joonas.codes(WIP)";
+	const title = "joonas.codes<WIP>";
 
 	let pointerOn = false;
 
