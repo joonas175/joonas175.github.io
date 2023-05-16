@@ -48,6 +48,7 @@ let formattedAuthor = author
     display: flex;
     align-items: center;
     padding-left: 5px;
+    font-family: monospace;
   }
 
   .close-button {
