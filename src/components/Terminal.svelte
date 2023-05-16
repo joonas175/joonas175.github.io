@@ -11,7 +11,7 @@ let formattedAuthor = author
 
 <div id="terminal-container">
   <div id="top-bar-container">
-    <div class="bar">/home/{formattedAuthor}</div>
+    <div class="bar">guest@portfolio: /home/{formattedAuthor}</div>
     <div class="close-button">
       {@html feather.icons.x.toSvg({
         width: '25px',
