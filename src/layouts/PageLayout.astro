@@ -1,0 +1,39 @@
+---
+import Terminal from '../components/Terminal.svelte';
+import HeaderTitle from '../components/HeaderTitle.svelte';
+import '../styles/PageLayout.scss';
+import '../styles/variables.css';
+
+interface Props {
+  title: string;
+  author: string;
+}
+
+const { title, author } = Astro.props;
+---
+<html lang="en">
+  <head>
+      <title>{ title }</title>
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Terminal author={author}>
+      <header>
+        <HeaderTitle client:load title={ title }/>
+        <nav>
+  
+        </nav>
+      </header>
+      
+      <main>
+        <slot/>
+      </main>
+    </Terminal>
+    <footer>
+      © {new Date().getFullYear()} Joonas Salojärvi
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --title-text-color: #12db15;
+  --default-text-color: #fafafa;
+  --site-background-color: #1e241c;
+  --header-font: 'VT323', monospace;
+  --content-max-width: 500px;
+}
