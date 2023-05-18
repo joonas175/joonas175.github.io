@@ -43,7 +43,7 @@ jobs:
           git add --all
           git status
       - name: Create commit
-        run: github commit -m "Updated page ${{ github.sha }}"
+        run: git commit -m "Updated page ${{ github.sha }}"
       - name: Upload to pages repo
         uses: ad-m/github-push-action@v0.6.0
         with:
