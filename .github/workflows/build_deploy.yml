@@ -1,0 +1,39 @@
+name: Build & deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: dist
+        retention-days: 5
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+      - name: Upload to pages repo
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          force: true
+          branch: site
+          github_token: ${{secrets.PAGE_REPO_ACCESS_KEY}}
+          repository: https://github.com/joonas175/joonas175.github.io
