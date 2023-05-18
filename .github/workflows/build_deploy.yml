@@ -36,4 +36,4 @@ jobs:
           force: true
           branch: site
           github_token: ${{secrets.PAGE_REPO_ACCESS_KEY}}
-          repository: https://github.com/joonas175/joonas175.github.io
+          repository: git@github.com:joonas175/joonas175.github.io.git
