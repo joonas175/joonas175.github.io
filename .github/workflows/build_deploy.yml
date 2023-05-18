@@ -39,15 +39,9 @@ jobs:
         with:
           name: build
       - name: Commit changes
-        uses: actions/checkout@v3
         run: |
-          git add --all
+          git config user.name ${{ github.actor }}
+          git config user.email ${{ vars.COMMIT_EMAIL }}
+          git add .
           git status
           git commit -m "Updated page ${{ github.sha }}"
-      - name: Upload to pages repo
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          force: true
-          branch: site
-          github_token: ${{secrets.PAGE_REPO_ACCESS_KEY}}
-          repository: joonas175/joonas175.github.io
