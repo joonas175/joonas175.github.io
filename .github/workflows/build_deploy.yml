@@ -31,8 +31,9 @@ jobs:
         with:
           repository: joonas175/joonas175.github.io
           ref: site
+          token: ${{secrets.PAGE_REPO_ACCESS_KEY}}
       - name: Clear previous
-        run: rm -rf ./
+        run: rm -rf *
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
