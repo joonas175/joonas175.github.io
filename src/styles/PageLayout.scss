@@ -4,8 +4,11 @@ html {
   display: flex;
   flex-direction: column;
 
-  background-color: var(--site-background-color);
-  color: #12db15;
+  background-image: url('./bg.svg');
+  background-size: cover;
+  color: var(--default-text-color);
+  font-family: var(--default-font);
+
 }
 
 body {
@@ -19,4 +22,19 @@ body {
 footer {
   display: flex;
   justify-content: center;
+  color: #00eeff;
+}
+
+a {
+  &, &:visited {
+    color: var(--link-color);
+  }
+  &:hover, &:active {
+    color: var(--link-color-hover);
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--default-text-color);
 }

@@ -20,7 +20,9 @@ let formattedAuthor = author
       }) }
     </div>
   </div>
-  <slot></slot>
+  <div id="terminal-content-container">
+    <slot></slot>
+  </div>
 </div>
 
 <style lang="scss">
@@ -28,7 +30,12 @@ let formattedAuthor = author
   min-width: min(var(--content-max-width), 90%);
   max-width: var(--content-max-width);
   margin: 5px 20px;
-  border: 2px solid rgba(0, 255, 34, 0.534);
+  border: 2px solid rgb(0, 217, 255);
+  background-color: #002c5f69;
+}
+
+#terminal-content-container {
+  padding: 10px;
 }
 
 #top-bar-container {
@@ -36,8 +43,7 @@ let formattedAuthor = author
   flex-direction: row;
   margin: 0;
 
-  background: rgb(0,255,38);
-  background: linear-gradient(90deg, rgb(0, 196, 29) 24%, rgb(46, 146, 0) 100%);
+  background: linear-gradient(90deg, rgb(0, 108, 196) 24%, rgb(0, 80, 146) 100%);
 
   border: 1px solid rgb(0, 80, 11);
 

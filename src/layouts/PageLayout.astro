@@ -8,9 +8,10 @@ import Navigation from '../components/Navigation.astro';
 interface Props {
   title: string;
   author: string;
+  pageRoute?: string[];
 }
 
-const { title, author } = Astro.props;
+const { title, author, pageRoute } = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -23,10 +24,10 @@ const { title, author } = Astro.props;
   <body>
     <Terminal author={author}>
       <header>
-        <HeaderTitle client:load title={ title }/>
+        <HeaderTitle client:load title={ title } commandParts={ pageRoute }/>
         <Navigation />
       </header>
-      
+      <hr>
       <main>
         <slot/>
       </main>
