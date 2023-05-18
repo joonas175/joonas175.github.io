@@ -45,3 +45,4 @@ jobs:
           git add .
           git status
           git commit -m "Updated page ${{ github.sha }}"
+          git push
