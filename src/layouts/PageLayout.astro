@@ -24,7 +24,7 @@ const { title, author, pageRoute } = Astro.props;
   <body>
     <Terminal author={author}>
       <header>
-        <HeaderTitle client:load title={ title } commandParts={ pageRoute }/>
+        <HeaderTitle client:idle title={ title } commandParts={ pageRoute }/>
         <Navigation />
       </header>
       <hr>

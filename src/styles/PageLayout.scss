@@ -4,6 +4,7 @@ html {
   display: flex;
   flex-direction: column;
 
+  background-color: hsl(203, 100%, 12%);
   background-image: url('./bg.svg');
   background-size: cover;
   color: var(--default-text-color);
