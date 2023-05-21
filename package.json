@@ -12,10 +12,12 @@
   "dependencies": {
     "@astrojs/prefetch": "0.2.1",
     "@astrojs/svelte": "^2.2.0",
+    "@astrojs/vue": "^2.2.0",
     "astro": "^2.5.0",
     "feather-icons": "^4.29.0",
     "sass": "^1.62.1",
-    "svelte": "^3.59.1"
+    "svelte": "^3.59.1",
+    "vue": "^3.2.30"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.29.1"
