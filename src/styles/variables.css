@@ -2,11 +2,22 @@
 
 :root {
   --title-text-color: #21edff;
+  --title-text-color-rgba: 33, 237, 255;
   --default-text-color: #fafafa;
   --header-font: 'VT323', monospace;
   --content-max-width: 600px;
   --default-font: monospace;
 
+  --highlight-text-color: #47ff70;
+  --highlight-text-color-rgba: 71, 255, 112;
+
+  --highlight-color-1: #ffd334;
+  --highlight-color-1-rgba: 255, 211, 52;
+
+  --highlight-color-2: #df6969;
+  --highlight-color-2-rgba: 223, 105, 105;
+
   --link-color: #85edff;
+  --link-color-rgba: 133, 237, 255;
   --link-color-hover: #ffffff;
 }
