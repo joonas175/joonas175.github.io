@@ -54,6 +54,10 @@ const props = defineProps<{
   font-size: 1.2rem;
   color: var(--default-text-color);
 
+  &:nth-child(2n - 1) {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
   &:hover {
     background-color: rgba(var(--link-color-rgba), 0.1);
     cursor: pointer;
