@@ -1,6 +1,6 @@
 <template>
   <div class="project-list-item-container">
-    <a :href="`/project/${project.slug}`">
+    <a :href="`/project/${project.slug}`" class="link-container">
       <i class="bracket">
         {
       </i>
@@ -59,6 +59,10 @@ const props = defineProps<{
     text-decoration: none;
   }
 
+  .link-container > *{
+    margin-bottom: 3px;
+  }
+
   &:nth-child(2n - 1) {
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -74,11 +78,6 @@ const props = defineProps<{
 
   .name-prop {
     color: var(--highlight-text-color);
-  }
-
-  & > * {
-    margin: 0;
-    margin-bottom: 5px;
   }
 
   .indent-1 {
