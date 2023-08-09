@@ -4,34 +4,38 @@
       {
     </div>
       <div class="indent-1">
-        "name": <b class="name-prop">"{{ project.data.name }}"</b>,
+        name: <b class="name-prop">"{{ project.data.name }}"</b>,
       </div>
       <div class="indent-1" v-if="project.data.shortDescription">
-        "description": <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>
+        description: <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>,
       </div>
       <div class="indent-1" v-if="project.data.languages">
-        "languages": [ 
-        <template v-for="(language, index) in project.data.languages">
+        languages: [ 
+        <div class="indent-1">
+          <template v-for="(language, index) in project.data.languages">
             <b class="language-prop" >"{{ language }}"</b>{{ index !== project.data.languages.length - 1 ? ', ' : '' }}
           </template>
-        ]
+        </div>
+        ],
       </div>
       <div class="indent-1" v-if="project.data.frameworks">
-        "frameworks": [ 
+        frameworks: [ 
+        <div class="indent-1">
           <template v-for="(framework, index) in project.data.frameworks">
             <b class="framework-prop" >"{{ framework }}"</b>{{ index !== project.data.frameworks.length - 1 ? ', ' : '' }}
-          </template>
-        ]
+          </template>  
+        </div>
+        ],
       </div>
       <div class="indent-1" v-if="project.data.otherSkills">
-        "skills": [ 
+        skills: [ 
         <template v-for="(skill, index) in project.data.otherSkills">
             <b class="framework-prop" >"{{ skill }}"</b>{{ index !== project.data.otherSkills.length - 1 ? ', ' : '' }}
           </template>
-        ]
+        ],
       </div>
     <div>
-      }{{ props.last ? null : ',' }}
+      },
     </div>
   </div>
 </template>
