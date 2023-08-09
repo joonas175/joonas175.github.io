@@ -1,42 +1,42 @@
 <template>
   <div class="project-list-item-container">
-    <div>
-      {
-    </div>
-      <div class="indent-1">
-        name: <b class="name-prop">"{{ project.data.name }}"</b>,
-      </div>
-      <div class="indent-1" v-if="project.data.shortDescription">
-        description: <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>,
-      </div>
-      <div class="indent-1" v-if="project.data.languages">
-        languages: [ 
+    <a :href="`/project/${project.slug}`">
+      <i class="bracket">
+        {
+      </i>
         <div class="indent-1">
-          <template v-for="(language, index) in project.data.languages">
-            <b class="language-prop" >"{{ language }}"</b>{{ index !== project.data.languages.length - 1 ? ', ' : '' }}
-          </template>
+          name: <b class="name-prop">"{{ project.data.name }}"</b>,
         </div>
-        ],
-      </div>
-      <div class="indent-1" v-if="project.data.frameworks">
-        frameworks: [ 
-        <div class="indent-1">
-          <template v-for="(framework, index) in project.data.frameworks">
-            <b class="framework-prop" >"{{ framework }}"</b>{{ index !== project.data.frameworks.length - 1 ? ', ' : '' }}
-          </template>  
+        <div class="indent-1" v-if="project.data.shortDescription">
+          description: <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>,
         </div>
-        ],
-      </div>
-      <div class="indent-1" v-if="project.data.otherSkills">
-        skills: [ 
-        <template v-for="(skill, index) in project.data.otherSkills">
+        <div class="indent-1" v-if="project.data.languages">
+          languages: <i class="bracket">[</i> 
+          <div class="indent-1">
+            <template v-for="(language, index) in project.data.languages">
+              <b class="language-prop" >"{{ language }}"</b>{{ index !== project.data.languages.length - 1 ? ', ' : '' }}
+            </template>
+          </div>
+          <i class="bracket">]</i>,
+        </div>
+        <div class="indent-1" v-if="project.data.frameworks">
+          frameworks: <i class="bracket">[</i>
+          <div class="indent-1">
+            <template v-for="(framework, index) in project.data.frameworks">
+              <b class="framework-prop" >"{{ framework }}"</b>{{ index !== project.data.frameworks.length - 1 ? ', ' : '' }}
+            </template>  
+          </div>
+          <i class="bracket">]</i>,
+        </div>
+        <div class="indent-1" v-if="project.data.otherSkills">
+          skills: <i class="bracket">[</i>  
+          <template v-for="(skill, index) in project.data.otherSkills">
             <b class="framework-prop" >"{{ skill }}"</b>{{ index !== project.data.otherSkills.length - 1 ? ', ' : '' }}
           </template>
-        ],
-      </div>
-    <div>
-      },
-    </div>
+          <i class="bracket">]</i>,
+        </div>
+      <i class="bracket">}</i>,
+    </a>
   </div>
 </template>
 
@@ -53,6 +53,11 @@ const props = defineProps<{
 .project-list-item-container {
   font-size: 1.2rem;
   color: var(--default-text-color);
+
+  a {
+    color: var(--default-text-color);
+    text-decoration: none;
+  }
 
   &:nth-child(2n - 1) {
     background-color: rgba(0, 0, 0, 0.1);
@@ -91,5 +96,10 @@ const props = defineProps<{
 
 .framework-prop {
   color: var(--highlight-color-1);
+}
+
+.bracket {
+  color: var(--title-text-color);
+  font-style: normal;
 }
 </style>
