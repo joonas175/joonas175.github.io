@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from "../../layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection('project');
+  return projects.map(entry => ({
+    params: { project: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<PageLayout title="joonas.codes" author="Joonas Salojärvi" pageRoute={['projects', 'show', entry.data.shortName]}>
+  <Content />
+</PageLayout>

@@ -48,6 +48,7 @@ const props = defineProps<{
 <style scoped lang="scss">
 .project-list-item-container {
   font-size: 1.2rem;
+  color: var(--default-text-color);
 
   &:hover {
     background-color: rgba(var(--link-color-rgba), 0.1);
