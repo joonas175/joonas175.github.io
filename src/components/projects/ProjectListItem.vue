@@ -7,7 +7,7 @@
         "name": <b class="name-prop">"{{ project.data.name }}"</b>,
       </div>
       <div class="indent-1" v-if="project.data.shortDescription">
-        "shortDescription": <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>
+        "description": <b class="short-desc-prop">"{{ project.data.shortDescription }}"</b>
       </div>
       <div class="indent-1" v-if="project.data.languages">
         "languages": [ 
