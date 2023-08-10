@@ -5,7 +5,19 @@ import { CollectionEntry, getCollection } from 'astro:content';
 
 const allProjects: CollectionEntry<'project'>[] = await getCollection('project');
 
+const langs = new Set<string>();
+const frameworks = new Set<string>();
+
+for (const proj of allProjects) {
+  for(const lang of proj.data.languages ?? []) {
+    langs.add(lang);
+  }
+  for(const fw of proj.data.frameworks ?? []) {
+    frameworks.add(fw);
+  }
+}
+
 ---
 <PageLayout title="joonas.codes" author="Joonas Salojärvi" pageRoute={['projects', 'list']}>
-  <ProjectList projects={ allProjects }/>
+  <ProjectList projects={ allProjects } {langs} {frameworks} client:only="vue" />
 </PageLayout>

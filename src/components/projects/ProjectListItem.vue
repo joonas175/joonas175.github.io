@@ -1,6 +1,6 @@
 <template>
   <div class="project-list-item-container">
-    <a :href="`/project/${project.slug}`" class="link-container">
+    <a :href="`/project/${project.slug}`" class="link-container padding-indent-1" rel="prefetch-intent">
       <i class="bracket">
         {
       </i>
@@ -57,6 +57,7 @@ const props = defineProps<{
   a {
     color: var(--default-text-color);
     text-decoration: none;
+    display: block;
   }
 
   .link-container > *{
@@ -79,14 +80,6 @@ const props = defineProps<{
   .name-prop {
     color: var(--highlight-text-color);
   }
-
-  .indent-1 {
-    margin-left: 2ch;
-  }
-
-  .indent-2 {
-    margin-left: 4ch;
-  }
 }
 
 .language-prop {
@@ -95,10 +88,5 @@ const props = defineProps<{
 
 .framework-prop {
   color: var(--highlight-color-1);
-}
-
-.bracket {
-  color: var(--title-text-color);
-  font-style: normal;
 }
 </style>

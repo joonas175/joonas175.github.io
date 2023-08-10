@@ -38,4 +38,28 @@ a {
 hr {
   border: 0;
   border-top: 1px solid var(--default-text-color);
+  margin: 1rem 0;
+}
+
+.indent-1 {
+  margin-left: 2ch;
+}
+
+.padding-indent-1 {
+  padding-left: 2ch;
+}
+
+i {
+  &.var {
+    color: #569cd6;
+    font-style: normal;
+  }
+  &.keyword {
+    color: #c586c0;
+    font-style: normal;
+  }
+  &.bracket {
+    color: var(--title-text-color);
+    font-style: normal;
+  }
 }
