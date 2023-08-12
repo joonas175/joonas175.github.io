@@ -91,9 +91,14 @@ const toggleFilter = (key: string, type: FilterType) => {
 }
 
 .filter-container {
+  display: flex;
+  align-items: center;
   b {
-    padding: 0.7ch;
+    padding: 3px 6px;
     cursor: pointer;
+    border: 1px solid;
+    border-radius: 2px;
+    margin: 0 2px;
 
     &.active {
       color: var(--highlight-text-color);
