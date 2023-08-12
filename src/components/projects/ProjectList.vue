@@ -80,25 +80,23 @@ const toggleFilter = (key: string, type: FilterType) => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
 
-  & > div {
-    margin-top: 0.5rem;
-  }
-
-  .filters-title {
-    align-self: center;
-  }
+.filters-title {
+  align-self: center;
 }
 
 .filter-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
   b {
     padding: 3px 6px;
     cursor: pointer;
     border: 1px solid;
     border-radius: 2px;
-    margin: 0 2px;
+    margin: 3px;
 
     &.active {
       color: var(--highlight-text-color);
