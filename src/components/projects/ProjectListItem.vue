@@ -36,7 +36,7 @@
           <i class="bracket">]</i>,
         </div>
         <div class="indent-1" v-if="project.data.type">
-          type: <i class="class">ProjectType.</i><i class="constant">{{ project.data.type.toUpperCase() }}</i>
+          type: <i class="class">ProjectType.</i><i class="constant">{{ project.data.type.toUpperCase() }}</i>,
         </div>
       <i class="bracket">}</i>,
     </a>
