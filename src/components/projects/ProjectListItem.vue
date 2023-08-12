@@ -54,7 +54,9 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .project-list-item-container {
-  font-size: 1.2rem;
+  @media screen and (min-width: 530px) {
+    font-size: 1.2rem;
+  }
   color: var(--default-text-color);
 
   a {
@@ -82,6 +84,7 @@ const props = defineProps<{
 
   .name-prop {
     color: var(--highlight-text-color);
+    font-size: 1.5rem;
   }
 }
 
