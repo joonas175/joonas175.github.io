@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from "../../layouts/PageLayout.astro";
+import ProjectDisplay from '../../components/projects/ProjectDisplay.svelte';
 
 export async function getStaticPaths() {
   const projects = await getCollection('project');
@@ -13,5 +14,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <PageLayout title="joonas.codes" author="Joonas Salojärvi" pageRoute={['projects', 'show', entry.data.shortName]}>
-  <Content />
+  <ProjectDisplay>
+    <Content />
+  </ProjectDisplay>
 </PageLayout>
