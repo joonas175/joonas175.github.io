@@ -1,6 +1,6 @@
 <template>
   <div class="project-list-item-container">
-    <a :href="`/project/${project.slug}/`" class="link-container padding-indent-1" rel="prefetch-intent">
+    <a :href="`/project/${project.slug}/`" class="link-container padding-indent-1" rel="prefetch">
       <i class="bracket">
         {
       </i>
