@@ -4,5 +4,6 @@ shortName: piikki
 shortDescription: Mobile application for accounting
 languages: ['JavaScript', 'Java', 'Swift']
 frameworks: ['React Native', 'Metal', 'OpenCV', 'Spring']
+type: work
 ---
 asd asd
