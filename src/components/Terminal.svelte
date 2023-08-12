@@ -27,9 +27,8 @@ let formattedAuthor = author
 
 <style lang="scss">
 #terminal-container {
-  min-width: min(var(--content-max-width), 90%);
+  width: 100%;
   max-width: var(--content-max-width);
-  margin: 5px 20px;
   border: 2px solid rgb(0, 217, 255);
   background-color: #002c5f69;
 }

@@ -42,11 +42,17 @@ hr {
 }
 
 .indent-1 {
-  margin-left: 2ch;
+  margin-left: 1ch;
+  @media (min-width: 530px) {
+    margin-left: 2ch;
+  }
 }
 
 .padding-indent-1 {
-  padding-left: 2ch;
+  padding-left: 1ch;
+  @media (min-width: 530px) {
+    padding-left: 2ch;
+  }
 }
 
 i {
