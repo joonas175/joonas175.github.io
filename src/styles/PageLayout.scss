@@ -68,4 +68,12 @@ i {
     color: var(--title-text-color);
     font-style: normal;
   }
+  &.class {
+    color: #4ec9b0;
+    font-style: normal;
+  }
+  &.constant {
+    color: #00c2ff;
+    font-style: normal;
+  }
 }
