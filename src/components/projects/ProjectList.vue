@@ -42,7 +42,7 @@ type FilterRecord = Record<string, boolean>;
 
 const createFilterRecordFromSet = (collection: Iterable<string>) => {
   return [...collection].reduce((acc, val) => {
-    acc[val] = sessionStorage.getItem(`filter:${val}`) === 'true';
+    acc[val] = false;
     return acc;
   }, {} as FilterRecord);
 };
