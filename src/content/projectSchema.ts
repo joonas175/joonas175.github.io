@@ -8,8 +8,8 @@ export const projectSchema = z.object({
   otherSkills: z.array(z.string()).optional(),
   shortDescription: z.string().optional(),
   type: z.enum(['school', 'work', 'hobby', 'other']).optional(),
-  start: z.date().optional(),
-  end: z.date().optional(),
+  start: z.coerce.string().transform((str) => new Date(str)).optional(),
+  end: z.coerce.string().transform((str) => new Date(str)).optional(),
 });
 
 export type Project = z.infer<typeof projectSchema>;
