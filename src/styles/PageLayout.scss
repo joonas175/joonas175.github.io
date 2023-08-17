@@ -77,3 +77,13 @@ i {
     font-style: normal;
   }
 }
+
+h1, h2, h3 {
+  font-family: var(--header-font);
+  letter-spacing: 1px;
+  color: var(--title-text-color);
+}
+
+h3 {
+  margin: 0 0;
+}
