@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { CollectionEntry, getCollection } from 'astro:content';
 import PageLayout from "../../layouts/PageLayout.astro";
 import ProjectDisplay from '../../components/projects/ProjectDisplay.svelte';
 
@@ -8,6 +8,10 @@ export async function getStaticPaths() {
   return projects.map(entry => ({
     params: { project: entry.slug }, props: { entry },
   }));
+}
+
+type Props = {
+  entry: CollectionEntry<'project'>
 }
 
 const { entry } = Astro.props;
