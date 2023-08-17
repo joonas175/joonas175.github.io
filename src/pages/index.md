@@ -9,6 +9,8 @@ This website acts as my personal portfolio. [Projects](/projects) page contains 
 work, school and hobby projects. Currently available only in English; the business is very international, so
 [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) has low priority for me in this case.
 
+#### Project pages are still work in progress.
+
 ## Who?
 Joonas Salojärvi, a full stack developer from Tampere, Finland. See more about me on the [cv](/cv) page.
 
