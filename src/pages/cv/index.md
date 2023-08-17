@@ -35,6 +35,8 @@ During my studies, I took part in tutoring, as well as student union and subject
 In Tampereen Tradenomiopiskelijat Ry (registered student organization for BBA students), I was a board member
 for 2 years, from 2019 to the end of 2020. First year my role was webmaster, second year I was the vice-chairperson.
 
+Thesis: [CI/CD-työkalut web-ohjelmiston jakelussa](https://urn.fi/URN:NBN:fi:amk-2021052010109)
+
 ## Work Experience
 
 ### Oscar Software, 2019 ->
