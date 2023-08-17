@@ -30,7 +30,7 @@
 
 
 </script>
-<h1 class:long="{ commandParts.join("").length > 7 }">
+<h1>
   { title }&gt; { command }{ pointerVisible ? '|' : '' }
 </h1>
 
@@ -43,7 +43,7 @@ h1 {
   margin: 0 0 10px 0;
   letter-spacing: normal;
   @media screen and (max-width: 520px) {
-    &.long {
+    & {
       min-height: 2em;
     }
   }
