@@ -4,14 +4,17 @@ import HeaderTitle from '../components/HeaderTitle.svelte';
 import '../styles/PageLayout.scss';
 import '../styles/variables.css';
 import Navigation from '../components/Navigation.astro';
+import type { MarkdownLayoutProps } from 'astro';
 
-interface Props {
+interface LayoutProps {
   title: string;
   author: string;
   pageRoute?: string[];
 }
 
-const { title, author, pageRoute } = Astro.props;
+type Props = LayoutProps | MarkdownLayoutProps<LayoutProps>;
+
+const { title, author, pageRoute } = 'frontmatter' in Astro.props ? Astro.props.frontmatter : Astro.props;
 ---
 <html lang="en">
   <head>
