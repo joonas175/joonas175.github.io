@@ -9,8 +9,8 @@ pageRoute: [ author show joonas ]
 Originally from Lohja, born in 1996. Moved to Tampere for studies in 2017 and have enjoyed my stay here.
 
 During freetime, I like to workout and play video games. I'm also a DIY enthusiast, and like to experiment with things.
-For example, I used to brew my own beer, but now I've moved to making honey mead. Home-made pizza with home-made mozzarella besides that
-and you've got yourself a Michelin star worthy meal (or atleast I try to make myself believe so). 
+For example, I used to brew my own beer, but now I've moved to making honey mead (inspired by Skyrim). 
+Home-made pizza with home-made mozzarella besides that and you've got yourself a Michelin star worthy meal (or atleast I try to make myself believe so). 
 As for DIY projects more related to my work, I bought a Raspberry PI just so I could have a "server" at home. 
 I was actually surprised how well it ran things: Jenkins workflows which deployed to Docker in the same machine worked just fine. 
 Adding Robot Framework in to the mix and we almost reached Pi's limits. I've since used it for many school projects. 
@@ -59,3 +59,8 @@ large amounts of money as part of the Western Union service.
 Substitute teaching in secondary school. Dish washing and waitering in a couple of restaurants. 
 Pollster for a company, which provided customer satisfaction measurement for other businesses.
 Packager at a plastic manufacturing plant.
+
+## Licenses, courses, certifications
+- [Certified ScrumMaster (CSM)](https://bcert.me/sildwyxuv)
+- [Microfrontends with React](https://www.udemy.com/certificate/UC-a0712b34-c6ba-41a7-a9cc-64d3fe80cd3a/)
+- CCNA Routing and Switching: Introduction to Networks
