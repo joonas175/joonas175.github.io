@@ -20,6 +20,11 @@
           {{ type }}
         </b>
       </div>
+      <div class="filter-container">
+        sorting
+        <b @click="toggleSorting('startDate')">startDate {{ sorting.startDate }}</b>
+        <b @click="toggleSorting('endDate')">endDate {{ sorting.endDate }}</b>
+      </div>
       <hr>
     </div>
     <b style="color: #fff5;">$ cat projects.js | filter | sort</b>
@@ -58,6 +63,22 @@ const fwFilters: FilterRecord = reactive(createFilterRecordFromSet([...props.fra
 const projectTypes = ['school', 'work', 'hobby', 'other'];
 const typeFilters: FilterRecord =  reactive(createFilterRecordFromSet(projectTypes));
 
+type SortDirection = 'ASC' | 'DESC' | null;
+type Sorting = {
+  startDate: SortDirection,
+  endDate: SortDirection
+};
+
+const sorting: Sorting = reactive({
+  startDate: 'DESC',
+  endDate: null
+});
+
+const toggleSorting = (property: keyof Sorting): void => {
+  const curr = sorting[property];
+  sorting[property] = curr === 'DESC' ? null : curr === null ? 'ASC' : 'DESC';
+};
+
 const filteredProjects: ComputedRef<CollectionEntry<'project'>[]> = computed(() => {
   const projects = new Set<CollectionEntry<'project'>>();
   let hasFilters = false;
@@ -89,7 +110,22 @@ const typeFilteredProjects: ComputedRef<CollectionEntry<'project'>[]> = computed
 })
 
 const sortedProjects = computed(() => {
-  return typeFilteredProjects.value;
+  return typeFilteredProjects.value.sort((a, b) => {
+    if(sorting.startDate === null) return 0;
+
+    const aStart = a.data.start?.getDate();
+    const bStart = b.data.start?.getDate();
+    
+    return sorting.startDate === 'ASC' ? aStart - bStart : bStart - aStart;
+  }).sort((a, b) => {
+    if(sorting.endDate === null) return 0;
+
+    // No end date = ongoing project. Should be sorted always first if end date === 'DESC'
+    const aEnd = a.data.end?.getDate() ?? Infinity;
+    const bEnd = b.data.end?.getDate() ?? Infinity;
+    
+    return sorting.startDate === 'ASC' ? aEnd - bEnd : bEnd - aEnd;
+  });
 });
 
 </script>

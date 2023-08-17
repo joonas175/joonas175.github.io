@@ -5,5 +5,6 @@ shortDescription: Web-based ERP solution
 languages: ['JavaScript', 'Java']
 frameworks: ['Spring', 'Vue', 'Liferay']
 type: work
+start: 2021-11
 ---
 asd asd

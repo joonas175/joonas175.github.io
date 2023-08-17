@@ -8,7 +8,7 @@ export const projectSchema = z.object({
   otherSkills: z.array(z.string()).optional(),
   shortDescription: z.string().optional(),
   type: z.enum(['school', 'work', 'hobby', 'other']).optional(),
-  start: z.coerce.string().transform((str) => new Date(str)).optional(),
+  start: z.coerce.string().transform((str) => new Date(str)),
   end: z.coerce.string().transform((str) => new Date(str)).optional(),
 });
 
