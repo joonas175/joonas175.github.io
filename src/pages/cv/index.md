@@ -2,7 +2,7 @@
 layout: ../../layouts/PageLayout.astro
 title: joonas.codes
 author: Joonas Salojärvi
-pageRoute: [ author show joonas ]
+pageRoute: [ cv show joonas ]
 ---
 # Joonas Salojärvi
 
