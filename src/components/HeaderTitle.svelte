@@ -41,7 +41,8 @@ h1 {
   font-family: var(--header-font);
   color: var(--title-text-color);
   margin: 0 0 10px 0;
-  @media screen and (max-width: 430px) {
+  letter-spacing: normal;
+  @media screen and (max-width: 520px) {
     &.long {
       min-height: 2em;
     }
