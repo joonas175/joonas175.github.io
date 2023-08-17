@@ -110,19 +110,19 @@ const typeFilteredProjects: ComputedRef<CollectionEntry<'project'>[]> = computed
 })
 
 const sortedProjects = computed(() => {
-  return typeFilteredProjects.value.sort((a, b) => {
+  return [...typeFilteredProjects.value].sort((a, b) => {
     if(sorting.startDate === null) return 0;
 
-    const aStart = a.data.start?.getDate();
-    const bStart = b.data.start?.getDate();
+    const aStart = a.data.start?.getTime();
+    const bStart = b.data.start?.getTime();
     
     return sorting.startDate === 'ASC' ? aStart - bStart : bStart - aStart;
   }).sort((a, b) => {
     if(sorting.endDate === null) return 0;
 
     // No end date = ongoing project. Should be sorted always first if end date === 'DESC'
-    const aEnd = a.data.end?.getDate() ?? Infinity;
-    const bEnd = b.data.end?.getDate() ?? Infinity;
+    const aEnd = a.data.end?.getTime() ?? Infinity;
+    const bEnd = b.data.end?.getTime() ?? Infinity;
     
     return sorting.startDate === 'ASC' ? aEnd - bEnd : bEnd - aEnd;
   });
