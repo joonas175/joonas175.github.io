@@ -10,7 +10,7 @@ work, school and hobby projects. Currently available only in English; the busine
 [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization) has low priority for me in this case.
 
 ## Who?
-Joonas Salojärvi, a full stack developer from Tampere, Finland. See more about me on the [author](/author) page.
+Joonas Salojärvi, a full stack developer from Tampere, Finland. See more about me on the [cv](/cv) page.
 
 ## How?
 Astro with static page generation, hosted on GitHub Pages with a custom domain. And the domain is cool, am I right? Deployed straight
