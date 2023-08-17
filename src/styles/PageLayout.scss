@@ -84,6 +84,11 @@ h1, h2, h3 {
   color: var(--title-text-color);
 }
 
+h2::before {
+  content: "> ";
+}
+
 h3 {
+  color: var(--secondary-title-text-color);
   margin: 0 0;
 }
