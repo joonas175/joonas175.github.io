@@ -84,7 +84,10 @@ const props = defineProps<{
 
   .name-prop {
     color: var(--highlight-text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    @media screen and (min-width: 530px) {
+      font-size: 1.4rem;
+    }
   }
 }
 
