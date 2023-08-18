@@ -29,7 +29,7 @@
           <i class="bracket">]</i>,
         </div>
         <div class="indent-1" v-if="project.data.other">
-          skills: <i class="bracket">[</i>  
+          other_tags: <i class="bracket">[</i>  
           <div class="indent-1">
             <template v-for="(skill, index) in project.data.other">
               <b class="framework-prop" >"{{ skill }}"</b>{{ index !== project.data.other.length - 1 ? ', ' : '' }}
