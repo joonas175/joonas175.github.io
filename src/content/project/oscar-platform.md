@@ -4,7 +4,7 @@ shortName: oscar-platform
 shortDescription: Micro frontend container for next generation web-based ERP
 languages: ['TypeScript', 'Java']
 frameworks: ['Vue', 'Spring']
-other: ['AWS', 'Architecture Design']
+other: ['AWS', 'Architecture Design', 'GH Actions']
 type: work
 start: 2023-01
 ---
