@@ -5,7 +5,7 @@ export const projectSchema = z.object({
   shortName: z.string(),
   languages: z.array(z.string()).optional(),
   frameworks: z.array(z.string()).optional(),
-  otherSkills: z.array(z.string()).optional(),
+  other: z.array(z.string()).optional(),
   shortDescription: z.string().optional(),
   type: z.enum(['school', 'work', 'hobby', 'other']).optional(),
   start: z.coerce.string().transform((str) => new Date(str)),

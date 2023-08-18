@@ -7,6 +7,7 @@ const allProjects: CollectionEntry<'project'>[] = await getCollection('project')
 
 const langs = new Set<string>();
 const frameworks = new Set<string>();
+const tags = new Set<string>();
 
 for (const proj of allProjects) {
   for(const lang of proj.data.languages ?? []) {
@@ -15,9 +16,12 @@ for (const proj of allProjects) {
   for(const fw of proj.data.frameworks ?? []) {
     frameworks.add(fw);
   }
+  for(const other of proj.data.other ?? []) {
+    tags.add(other);
+  }
 }
 
 ---
 <PageLayout title="joonas.codes" author="Joonas Salojärvi" pageRoute={['projects', 'list']}>
-  <ProjectList projects={ allProjects } {langs} {frameworks} client:load />
+  <ProjectList projects={ allProjects } {langs} {frameworks} {tags} client:load />
 </PageLayout>

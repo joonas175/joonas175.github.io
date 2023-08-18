@@ -15,6 +15,12 @@
         </b>
       </div>
       <div class="filter-container">
+        other_tags
+        <b v-for="(on, tag) of tagFilters" :class="{active: on}" @click="tagFilters[tag] = !tagFilters[tag];">
+          {{ tag }}
+        </b>
+      </div>
+      <div class="filter-container">
         project_type
         <b v-for="(on, type) of typeFilters" :class="{active: on}" @click="typeFilters[type] = !typeFilters[type];">
           {{ type }}
@@ -44,7 +50,8 @@ import ProjectListItem from './ProjectListItem.vue';
 const props = withDefaults(defineProps<{
   projects: CollectionEntry<'project'>[],
   langs: Iterable<string>,
-  frameworks: Iterable<string> 
+  frameworks: Iterable<string>,
+  tags: Iterable<string> 
 }>(), {
   projects: () => []
 });
@@ -60,6 +67,7 @@ const createFilterRecordFromSet = (collection: Iterable<string>) => {
 
 const langFilters: FilterRecord = reactive(createFilterRecordFromSet([...props.langs].sort()));
 const fwFilters: FilterRecord = reactive(createFilterRecordFromSet([...props.frameworks].sort()));
+const tagFilters: FilterRecord = reactive(createFilterRecordFromSet([...props.tags].sort()));
 const projectTypes = ['school', 'work', 'hobby', 'other'];
 const typeFilters: FilterRecord =  reactive(createFilterRecordFromSet(projectTypes));
 
@@ -93,6 +101,13 @@ const filteredProjects: ComputedRef<CollectionEntry<'project'>[]> = computed(() 
     if(fwFilters[fw]) {
       hasFilters = true;
       props.projects.filter((p) => p.data.frameworks?.find((fw1) => fw1 === fw)).forEach((p) => projects.add(p));
+    }
+  }
+
+  for(const tag in tagFilters) {
+    if(tagFilters[tag]) {
+      hasFilters = true;
+      props.projects.filter((p) => p.data.other?.find((tag1) => tag1 === tag)).forEach((p) => projects.add(p));
     }
   }
 
