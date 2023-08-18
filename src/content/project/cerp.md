@@ -3,7 +3,8 @@ name: Oscar cERP
 shortName: cerp
 shortDescription: Web-based ERP solution
 languages: ['JavaScript', 'Java']
-frameworks: ['Spring', 'Vue', 'Liferay']
+frameworks: ['Spring', 'Vue']
+other: ['Liferay']
 type: work
 start: 2021-11
 ---
