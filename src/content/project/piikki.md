@@ -13,7 +13,10 @@ start: 2019-05
 A mobile application for sending receipts to accounting. Take a picture, fill in the information about the purchase and send
 to accounting for approval. Available for Android and iOS.
 
-[View on Play Store](https://play.google.com/store/apps/details?id=fi.oscar.piikki)
+[View on Play Store](https://play.google.com/store/apps/details?id=fi.oscar.piikki)  
+  
+Related article in Finnish:  
+[Oscar Akatemiassa kehitytään oman alan ammattilaisiksi](https://www.oscar.fi/oscar-akatemiassa-kehitytaan-oman-alan-ammattilaisiksi/)
 
 ## Work
 
