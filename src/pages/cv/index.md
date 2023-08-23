@@ -44,9 +44,9 @@ Thesis: [CI/CD-työkalut web-ohjelmiston jakelussa](https://urn.fi/URN:NBN:fi:am
 Started as a full stack developer trainee, moving up to more senior level work.
 
 Related projects:
-- [Oscar Piikki](/project/piikki)
-- [Oscar cERP](/project/cerp)
-- [Oscar Web Plaform](/project/oscar-platform)
+- [Oscar Piikki](/project/piikki/)
+- [Oscar cERP](/project/cerp/)
+- [Oscar Web Plaform](/project/oscar-platform/)
 
 ### MH-Asiamies Lohja, 2017 - 2018
 

@@ -32,7 +32,7 @@ applications or through the platform.
 Container with Vite and Vue 3. Module federation implemented with non-framework specific
 ideology: container can run applications using any framework, sharing dependencies as needed.
 
-Applications written so far in Vue 3. Applications represent portlets ported from [Oscar cERP](/project/cerp).
+Applications written so far in Vue 3. Applications represent portlets ported from [Oscar cERP](/project/cerp/).
 Each application can be thought of as a subdomain, in the context of domain driven design. The first application
 implemented was related to timetracking.
 
