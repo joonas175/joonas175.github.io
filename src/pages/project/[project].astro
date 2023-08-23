@@ -18,7 +18,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <PageLayout title="joonas.codes" author="Joonas Salojärvi" pageRoute={['projects', 'show', entry.data.shortName]}>
-  <ProjectDisplay>
+  <ProjectDisplay client:idle>
     <Content />
   </ProjectDisplay>
 </PageLayout>
