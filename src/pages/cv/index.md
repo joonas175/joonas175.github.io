@@ -16,6 +16,10 @@ As for DIY projects more related to my work, I bought a Raspberry PI just so I c
 I was actually surprised how well it ran things: Jenkins workflows which deployed to Docker in the same machine worked just fine. 
 Adding Robot Framework in to the mix and we almost reached Pi's limits. I've since used it for many school projects. 
 
+I get excited about new things and I'm eager to learn. I have broad knowledge, covering many programming languages,
+frameworks, testing and CI/CD methods, architecture design etc. on the basic level at least. I'm more proficient in JS/TS and Vue. 
+I've been doing more frontend than backend overall, but I prefer backend programming more. I enjoy mobile development also.
+
 ## Work Experience
 
 ### Oscar Software, 2019 ->
