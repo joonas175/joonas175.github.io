@@ -1,11 +1,11 @@
 <script lang="ts">
 </script>
 <div class="project-display-container">
-  <a href="/projects/" rel="prefetch">Back to projects</a>
+  <a href={"#"} on:click|preventDefault={history.back}>Back</a>
   <div class="project-display-content">
     <slot></slot>
   </div>
-  <a href="/projects/" rel="prefetch">Back to projects</a>
+  <a href={"#"} on:click|preventDefault={history.back}>Back</a>
 </div>
 
 <style lang="scss">
