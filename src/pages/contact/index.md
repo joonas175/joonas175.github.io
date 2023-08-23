@@ -16,4 +16,5 @@ salojarvi.joonas@gmail.com
 [LinkedIn](https://www.linkedin.com/in/joonas-saloj%C3%A4rvi/)  
 [GitHub](https://github.com/joonas175)  
 [Instagram](https://www.instagram.com/testojonttu/)  
+[Youtube](https://www.youtube.com/@joonas175)  
 Discord: **joonas175**
